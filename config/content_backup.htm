@@ -1,15 +1,11 @@
-<h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
+<h1>W1</h1>
+<p><span>下載 Download Windows x86-64 executable installer 準備安裝 3.8.2 python 解譯器,下載 full 64-bit download, 解開壓縮檔案, 就是可以直接執行的 Scite.exe 編輯器,將安裝的 Python38 目錄以及 Scite 目錄搬入 c:\wcm2020\data 目錄中, 然後藉由Scite.exe</span><span>建立 stop.bat 與 start.bat</span></p>
+<p>影片:<a href="https://www.youtube.com/watch?v=O-5uZBOdDtY&amp;t=298s">https://www.youtube.com/watch?v=O-5uZBOdDtY&amp;t=298s</a></p>
+<h1>W2-W4</h1>
+<p><span>利用 get-pip.py 在 W1 所完成的</span><span>可擕系統安裝 pip,後設定 start.bat和pacman.conf和wgetrc 等兩個檔案,修改完成後, 重新開啟 msys64 目錄下的 mingw64.exe 後, 就可以透過 IPv6 的 proxy server 執行 package 更新</span></p>
+<p>影片:<a href="https://www.youtube.com/watch?v=63efZ6iKihE">https://www.youtube.com/watch?v=63efZ6iKihE</a></p>
+<h1>W6</h1>
+<p><span>準備一個 webcam，以應後續 online 上課及拍攝操作影片所需,都能在 YouTube 直播加上OBS 串流模式下，將電腦桌面疊上直播者的 webcam 畫面製作</span></p>
+<p>影片:<a href="https://www.youtube.com/watch?v=eoyLP7Sa8cs">https://www.youtube.com/watch?v=eoyLP7Sa8cs</a></p>
+<h1>W7</h1>
+<p>用meet <span>testing 進行線上直播</span></p>
