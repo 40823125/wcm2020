@@ -7,7 +7,7 @@ Slug: wcn2020-4
 Author: yen
 ---
 
-建立倉儲
+建立部落格
 
 <!-- PELICAN_END_SUMMARY -->
 
