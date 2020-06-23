@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CMSimfly 網際內容管理 - Misc</title><link href="./" rel="alternate"></link><link href=".%5Cfeeds/misc.atom.xml" rel="self"></link><id>./</id><updated>2020-06-23T10:28:00+08:00</updated><entry><title>wcm2020(ssh)</title><link href=".%5C2020-wcm-32-bit-Windows.html" rel="alternate"></link><published>2020-06-23T10:28:00+08:00</published><updated>2020-06-23T10:28:00+08:00</updated><author><name>yen</name></author><id>tag:None,2020-06-23:.\2020-wcm-32-bit-Windows.html</id><summary type="html">&lt;p&gt;建立ssh&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;建立ssh&lt;/p&gt;
+
+
+&lt;p&gt;&lt;iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/BfReeoUSCHE" width="560"&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+&lt;p&gt;1. 下載 Putty 工具組&lt;/p&gt;
+
+&lt;p style="padding-left: 30px;"&gt;&lt;span&gt;從 &lt;/span&gt;&lt;a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" rel="nofollow"&gt;https://www.chiark.greenend.org.uk/~sgtatham/putty/&lt;/a&gt;&lt;span&gt;&lt;span&gt; &lt;/span&gt;下載一般版, 或從&lt;span&gt; &lt;/span&gt;&lt;/span&gt;&lt;a href="http://jakub.kotrla.net/putty/" rel="nofollow"&gt;http://jakub.kotrla.net/putty/&lt;/a&gt;&lt;span&gt;&lt;span&gt; &lt;/span&gt;下載特殊的可攜版本.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span&gt;2. 利用 y:\portablegit\bin\sh.exe 進入 shell 命令環境後, 以 &lt;/span&gt;&lt;/p&gt;
+
+&lt;pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"&gt; ssh-keygen -t rsa -b 4096 -C "使用者學號"&lt;/pre&gt;
+
+&lt;p style="padding-left: 30px;"&gt;在 /y/home/.ssh 目錄下建立 id_rsa 與 id_rsa.pub 等 private key 與 public key&lt;/p&gt;
+
+&lt;p style="padding-left: 30px;"&gt;之後以 SciTE 開啟 id_rsa.pub 後, 將此 public key 的內容, 以新增添加到 Github.com 帳號下 personal settings -&amp;gt; SSH and GPG keys 頁面下.&lt;/p&gt;
+
+&lt;p&gt;3. 接下來要利用 puttygen.exe 將 id_rsa 轉為 Putty 可以解讀的 .ppk 格式, 並修改隨身系統的啟動批次檔案, 指定利用 putty 目錄下的 plink 執行 git 指令的網路代理設定.&lt;/p&gt;
+
+&lt;pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"&gt;修改啟動的 start.bat 加入下列設定:
+
+set GIT_HOME=%Disk%:\portablegit\bin\
+set GIT_SSH=%Disk%:\putty\plink.exe&lt;/pre&gt;
+
+&lt;p&gt;4. 利用 puttygen.exe 載入第二步驟所建立的 private key, 也就是 id_rsa.&lt;/p&gt;
+
+&lt;p&gt;開啟 puttygen 之後, 以右下方的 load 載入 id_rsa, 成功載入後, 利用 save private key 按鈕, 將已經轉為 putty 格式的 .ppk 存檔. 此一 .ppk 檔案必須在設定 putty 中 github.com session 時, 在 Connection-&amp;gt;SSH-&amp;gt;Auth 項目下, 將轉檔後的 .ppk 指向 private key file for authentication 欄位.&lt;/p&gt;
+
+&lt;p&gt;並在 Connection-&amp;gt;Proxy 項目下, 指定 Proxy type: HTTP, 並將 IPv6 代理主機設為 ::53 或 ::42 埠號設為 3128.&lt;/p&gt;
+
+&lt;p&gt;5. 之後確定 home 下的 .ssh 目錄中的 config 設定檔案為:&lt;/p&gt;
+
+&lt;pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"&gt;# no proxy at home
+#ProxyCommand y:/PortableGit/mingw64/bin/connect.exe -H proxy.mde.nfu.edu.tw:3128 %h %p
+# set git_ssh=y:/putty/plink.exe with auth under putty github.com session setup
+ProxyCommand y:/putty/plink.exe github.com %h %p
+
+Host github.com
+    User git
+    Port 22
+    Hostname github.com
+
+    # for connect.exe need openssh key format
+    #IdentityFile "y:\home\.ssh\id_rsa_mdecourse"
+    # for plink.exe need rsa key format but set under putty github.com session
+    # plink.exe do not need the following setting
+    #IdentityFile "y:\home\.ssh\mdecourse_putty_private.ppk"
+
+    TCPKeepAlive yes
+    IdentitiesOnly yes
+&lt;/pre&gt;
+
+&lt;p&gt;6. 最後再將 wcmj2020 倉儲中 .git 目錄下的 config 檔案中的連線協定, 由 https 改為採 ssh 連線: 範例如下:&lt;/p&gt;
+
+&lt;pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"&gt;[core]
+    repositoryformatversion = 0
+    filemode = false
+    bare = false
+    logallrefupdates = true
+    symlinks = false
+    ignorecase = true
+[submodule]
+    active = .
+[remote "origin"]
+    #url = https://github.com/mdecourse/wcmj2020.git
+    url = git@github.com:mdecourse/wcmj2020.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master
+[submodule "cmsimde"]
+    url = https://github.com/mdecourse/cmsimde.git&lt;/pre&gt;
+
+&lt;p&gt;之後就可以透過近端的 .ppk private key 與 Github.com 上的 public key 對應, 無需輸入帳號密碼就可以進行 git push.&lt;/p&gt;</content><category term="Misc"></category><category term="2020wcm"></category></entry></feed>
