@@ -58,8 +58,9 @@
 <v t="leo.20170710022041.1"><vh>@path markdown</vh>
 <v t="leo.20180115115910.1"><vh>2018</vh>
 <v t="leo.20180423103639.1"><vh>2018 Fall CP 課程</vh>
-<v t="leo.20180423103656.1"><vh>@edit 20180910.md</vh></v>
-<v t="leo.20180909205246.1"><vh>@edit 20180911.md</vh></v>
+<v t="leo.20180423103656.1"><vh>@edit ssh.md</vh></v>
+<v t="leo.20180909205246.1"><vh>@edit ubuntu.md</vh></v>
+<v t="leo.20200623233102.1"><vh>@edit cmsimde.md</vh></v>
 </v>
 </v>
 </v>
