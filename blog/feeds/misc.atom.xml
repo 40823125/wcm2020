@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>wcm2020 網際內容管理 - Misc</title><link href="https://40823125.github.io/wcm2020/blog/" rel="alternate"></link><link href="https://40823125.github.io/wcm2020/blog/feeds/misc.atom.xml" rel="self"></link><id>https://40823125.github.io/wcm2020/blog/</id><updated>2020-06-23T10:28:00+08:00</updated><entry><title>wcm2020(ssh)</title><link href="https://40823125.github.io/wcm2020/blog/wcm2020-2.html" rel="alternate"></link><published>2020-06-23T10:28:00+08:00</published><updated>2020-06-23T10:28:00+08:00</updated><author><name>yen</name></author><id>tag:40823125.github.io,2020-06-23:/wcm2020/blog/wcm2020-2.html</id><content type="html"></content><category term="Misc"></category><category term="2020wcm"></category></entry><entry><title>wcm2020(ssh)</title><link href="https://40823125.github.io/wcm2020/blog/wcn2020-1.html" rel="alternate"></link><published>2020-06-23T10:28:00+08:00</published><updated>2020-06-23T10:28:00+08:00</updated><author><name>yen</name></author><id>tag:40823125.github.io,2020-06-23:/wcm2020/blog/wcn2020-1.html</id><summary type="html">&lt;p&gt;建立ssh&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>wcm2020 網際內容管理 - Misc</title><link href="https://40823125.github.io/wcm2020/blog/" rel="alternate"></link><link href="https://40823125.github.io/wcm2020/blog/feeds/misc.atom.xml" rel="self"></link><id>https://40823125.github.io/wcm2020/blog/</id><updated>2020-06-23T10:28:00+08:00</updated><entry><title>wcm2020(ubuntu)</title><link href="https://40823125.github.io/wcm2020/blog/wcm2020-2.html" rel="alternate"></link><published>2020-06-23T10:28:00+08:00</published><updated>2020-06-23T10:28:00+08:00</updated><author><name>yen</name></author><id>tag:40823125.github.io,2020-06-23:/wcm2020/blog/wcm2020-2.html</id><summary type="html">&lt;p&gt;用 Virtualbox 建立ubuntu&lt;/p&gt;
+
+</summary><content type="html">&lt;p&gt;用 Virtualbox 建立ubuntu&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/D7llxFAGAsw" width="560"&gt;&lt;/iframe&gt;&lt;iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/yl_n4TmiatI" width="560"&gt;&lt;/iframe&gt;&lt;iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/PzSosblmtxw" width="560"&gt;&lt;/iframe&gt;&lt;iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/rUCiE53VSCY" width="560"&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+&lt;p&gt;&lt;p&gt;&lt;b&gt;前面步驟為安裝設定重點為ipv4及ipv6網路設定都為自動&lt;/b&gt;&lt;br/&gt;&lt;b&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;進入介面後，再輸入指令&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;設定網域&lt;/b&gt;&lt;/p&gt;
+&lt;pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"&gt;sudo vi 00-installer-config.yaml&lt;/pre&gt;
+&lt;p&gt;&lt;b&gt;&lt;/b&gt; &lt;strong&gt;輸入指令&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;網路部分設定&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"&gt;sudo netplan apply&lt;/pre&gt;
+&lt;pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"&gt;ping4 140.130.15.254&lt;/pre&gt;
+&lt;p&gt;&lt;b&gt;&lt;/b&gt;&lt;b&gt;安裝pip3&lt;/b&gt;&lt;/p&gt;
+&lt;pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"&gt;sudo apt install net-tools&lt;/pre&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"&gt;sudo apt update&lt;/pre&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"&gt;sudo apt install python3-pip&lt;/pre&gt;
+&lt;p&gt;&lt;b&gt;利用pip3安裝flask flask_cors bs4 lxml markdown&lt;/b&gt;&lt;/p&gt;
+&lt;pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"&gt;sudo pip3 install flask flask_cors bs4 lxml markdown&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;建立github資料夾&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"&gt;mkdir github&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;安裝桌面&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"&gt;sudo apt install xorg&lt;/pre&gt;
+&lt;pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"&gt;sudo apt install fluxbox&lt;/pre&gt;
+&lt;pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"&gt;sudo apt install lxde&lt;/pre&gt;&lt;/p&gt;</content><category term="Misc"></category><category term="2020wcm"></category></entry><entry><title>wcm2020(ssh)</title><link href="https://40823125.github.io/wcm2020/blog/wcn2020-1.html" rel="alternate"></link><published>2020-06-23T10:28:00+08:00</published><updated>2020-06-23T10:28:00+08:00</updated><author><name>yen</name></author><id>tag:40823125.github.io,2020-06-23:/wcm2020/blog/wcn2020-1.html</id><summary type="html">&lt;p&gt;建立ssh&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;建立ssh&lt;/p&gt;
 
 

@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 
-  <title>wcm2020(ssh)</title>
+  <title>wcm2020(ubuntu)</title>
 
 
   <meta name="HandheldFriendly" content="True" />
@@ -42,6 +42,7 @@
 
     <link href="https://40823125.github.io/wcm2020/blog/wcm2020-2.html" rel="canonical" />
 
+        <meta name="description" content="用 Virtualbox 建立ubuntu">
 
         <meta name="author" content="yen">
 
@@ -52,8 +53,8 @@
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="wcm2020 網際內容管理"/>
-<meta property="og:title" content="wcm2020(ssh)"/>
-<meta property="og:description" content=""/>
+<meta property="og:title" content="wcm2020(ubuntu)"/>
+<meta property="og:description" content="用 Virtualbox 建立ubuntu"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://40823125.github.io/wcm2020/blog/wcm2020-2.html"/>
 <meta property="og:type" content="article"/>
@@ -70,8 +71,8 @@
 {
   "@context": "http://schema.org",
   "@type": "Article",
-  "name": "wcm2020(ssh)",
-  "headline": "wcm2020(ssh)",
+  "name": "wcm2020(ubuntu)",
+  "headline": "wcm2020(ubuntu)",
   "datePublished": "2020-06-23 10:28:00+08:00",
   "dateModified": "",
   "author": {
@@ -81,7 +82,7 @@
   },
   "image": "https://40823125.github.io/wcm2020/blog/theme/images/post-bg.jpg",
   "url": "https://40823125.github.io/wcm2020/blog/wcm2020-2.html",
-  "description": ""
+  "description": "用 Virtualbox 建立ubuntu"
 }
 </script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
@@ -196,7 +197,7 @@ init_mathjax();
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
-        <h1 class="post-title">wcm2020(ssh)</h1>
+        <h1 class="post-title">wcm2020(ubuntu)</h1>
         <!-- TODO : Proper class for headline -->
         <span class="post-meta">
                 <a href="https://40823125.github.io/wcm2020/blog/author/yen.html">Yen</a>
@@ -222,12 +223,40 @@ init_mathjax();
         <article class="post">
         <div class="inner">
             <section class="post-content">
-                
+                <p>用 Virtualbox 建立ubuntu</p>
+
+
+
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/D7llxFAGAsw" width="560"></iframe><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/yl_n4TmiatI" width="560"></iframe><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/PzSosblmtxw" width="560"></iframe><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/rUCiE53VSCY" width="560"></iframe></p>
+
+<hr>
+<p><p><b>前面步驟為安裝設定重點為ipv4及ipv6網路設定都為自動</b><br/><b></b></p>
+<p><b>進入介面後，再輸入指令</b></p>
+<p><b>設定網域</b></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo vi 00-installer-config.yaml</pre>
+<p><b></b> <strong>輸入指令</strong></p>
+<p><strong>網路部分設定</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo netplan apply</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">ping4 140.130.15.254</pre>
+<p><b></b><b>安裝pip3</b></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo apt install net-tools</pre>
+<p></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo apt update</pre>
+<p></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo apt install python3-pip</pre>
+<p><b>利用pip3安裝flask flask_cors bs4 lxml markdown</b></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo pip3 install flask flask_cors bs4 lxml markdown</pre>
+<p><strong>建立github資料夾</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">mkdir github</pre>
+<p><strong>安裝桌面</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo apt install xorg</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo apt install fluxbox</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo apt install lxde</pre></p>
             </section>
 
             <section class="post-info">
                 <div class="post-share">
-                    <a class="twitter" href="https://twitter.com/share?text=wcm2020(ssh)&amp;url=https://40823125.github.io/wcm2020/blog/wcm2020-2.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <a class="twitter" href="https://twitter.com/share?text=wcm2020(ubuntu)&amp;url=https://40823125.github.io/wcm2020/blog/wcm2020-2.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
                     </a>
                     <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://40823125.github.io/wcm2020/blog/wcm2020-2.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
