@@ -61,6 +61,7 @@
 <v t="leo.20180423103656.1"><vh>@edit ssh.md</vh></v>
 <v t="leo.20180909205246.1"><vh>@edit ubuntu.md</vh></v>
 <v t="leo.20200623233102.1"><vh>@edit cmsimde.md</vh></v>
+<v t="leo.20200623234025.1"><vh>@edit pelican&amp;blog.md</vh></v>
 </v>
 </v>
 </v>
