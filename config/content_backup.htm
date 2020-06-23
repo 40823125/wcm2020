@@ -18,6 +18,7 @@
 <p>介紹PYTHON 程式</p>
 <h1>W11</h1>
 <p>建立ssh</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/BfReeoUSCHE" width="560"></iframe></p>
 <p>1. 下載 Putty 工具組</p>
 <p style="padding-left: 30px;"><span>從 </span><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/" rel="nofollow">https://www.chiark.greenend.org.uk/~sgtatham/putty/</a><span><span> </span>下載一般版, 或從<span> </span></span><a href="http://jakub.kotrla.net/putty/" rel="nofollow">http://jakub.kotrla.net/putty/</a><span><span> </span>下載特殊的可攜版本.</span></p>
 <p><span>2. 利用 y:\portablegit\bin\sh.exe 進入 shell 命令環境後, 以 </span></p>
@@ -73,6 +74,28 @@ Host github.com
 	url = https://github.com/mdecourse/cmsimde.git</pre>
 <p>之後就可以透過近端的 .ppk private key 與 Github.com 上的 public key 對應, 無需輸入帳號密碼就可以進行 git push.</p>
 <h1>W12</h1>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/D7llxFAGAsw" width="560"></iframe><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/yl_n4TmiatI" width="560"></iframe><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/PzSosblmtxw" width="560"></iframe><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/rUCiE53VSCY" width="560"></iframe></p>
 <p>用 Virtualbox 建立ubuntu</p>
-<h1>W13</h1>
+<p><b>前面步驟為安裝設定重點為ipv4及ipv6網路設定都為自動</b><br/><b></b></p>
+<p><b>進入介面後，再輸入指令</b></p>
+<p><b>設定網域</b></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo vi 00-installer-config.yaml</pre>
+<p><b></b> <strong>輸入指令</strong></p>
+<p><strong>網路部分設定</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo netplan apply</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">ping4 140.130.15.254</pre>
+<p><b></b><b>安裝pip3</b></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo apt install net-tools</pre>
+<p></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo apt update</pre>
+<p></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo apt install python3-pip</pre>
+<p><b>利用pip3安裝flask flask_cors bs4 lxml markdown</b></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo pip3 install flask flask_cors bs4 lxml markdown</pre>
+<p><strong>建立github資料夾</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">mkdir github</pre>
+<p><strong>安裝桌面</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo apt install xorg</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo apt install fluxbox</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">sudo apt install lxde</pre><h1>W13</h1>
 <p>用硬碟<span>建立ubuntu的虛擬主機</span></p>
