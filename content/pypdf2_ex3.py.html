@@ -154,10 +154,25 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='W2-W4.html'>Next</a> >> W2-W4<br /><h1>W1</h1>
-<p><span>下載 Download Windows x86-64 executable installer 準備安裝 3.8.2 python 解譯器,下載 full 64-bit download, 解開壓縮檔案, 就是可以直接執行的 Scite.exe 編輯器,將安裝的 Python38 目錄以及 Scite 目錄搬入 c:\wcm2020\data 目錄中, 然後藉由Scite.exe</span><span>建立 stop.bat 與 start.bat</span></p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/O-5uZBOdDtY" width="560"></iframe></p>
-<br /> <a href='W2-W4.html'>Next</a> >> W2-W4</div>
+    <div id="tipue_search_content">pypdf2_ex2.py << <a href='pypdf2_ex2.py.html'>Previous</a> <a href='pypdf2_ex23.py.html'>Next</a> >> pypdf2_ex23.py<br /><h1>pypdf2_ex3.py</h1>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># pypdf2_ex3.py
+# merge several pdf files
+import sys
+import PyPDF2
+ 
+pdf_write_object = PyPDF2.PdfFileWriter()
+ 
+#for i in sys.argv[1:]:
+for i in ["text_1_page_10.pdf","text2_11_page_20.pdf","text3_21_page_30.pdf"]:
+    pdf_read_object = PyPDF2.PdfFileReader(i)
+    print('processing file : '+ i + 'number of pages : ' +  str(pdf_read_object.numPages))
+    for page in range(pdf_read_object.numPages):
+        pdf_write_object.addPage(pdf_read_object.getPage(page))
+ 
+final_file_object = open('2020CMS.pdf', 'wb')
+pdf_write_object.write(final_file_object)
+final_file_object.close()</pre>
+<br />pypdf2_ex2.py << <a href='pypdf2_ex2.py.html'>Previous</a> <a href='pypdf2_ex23.py.html'>Next</a> >> pypdf2_ex23.py</div>
         
     <!-- footer -->
       <div class="container">
